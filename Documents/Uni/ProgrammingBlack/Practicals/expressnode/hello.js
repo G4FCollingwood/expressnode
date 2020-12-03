@@ -20,5 +20,9 @@ app.get('/random/:max', function(req, resp){
     console.log('Max via url is ' + max + ' rand is ' + rand)
     resp.send('' + rand)
   })
-
+app.get('/w', function(req, resp){
+    ranodmperson = req.query.person
+    console.log('The random person is ' + ranodmperson)
+    resp.send('' + ranodmperson)
+})
 app.listen(8090)
